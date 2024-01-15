@@ -1,0 +1,57 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".DetailActivity">
+
+    <androidx.appcompat.widget.Toolbar
+        android:id="@+id/toolbar_detail"
+        android:layout_width="match_parent"
+        android:layout_height="?attr/actionBarSize"
+        android:background="?attr/colorPrimary"
+        android:title="Task Details"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:popupTheme="@style/ThemeOverlay.AppCompat.Light"
+        app:navigationIcon="?android:attr/homeAsUpIndicator" />
+
+    <TextView
+        android:id="@+id/taskObjectDetail"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/toolbar_detail"
+        android:layout_marginTop="16dp"
+        android:text="Task object: "
+        android:textSize="18sp" />
+
+    <TextView
+        android:id="@+id/dayOfWeekDetail"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/taskObjectDetail"
+        android:layout_marginTop="16dp"
+        android:text="Day of week: "
+        android:textSize="18sp" />
+
+    <TextView
+        android:id="@+id/wtdDetail"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/dayOfWeekDetail"
+        android:layout_marginTop="16dp"
+        android:text="What to do: "
+        android:textSize="18sp" />
+
+    <Button
+        android:id="@+id/deleteButton"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/wtdDetail"
+        android:layout_marginTop="24dp"
+        android:text="Delete"
+        android:onClick="onDeleteButtonClick" />
+
+</RelativeLayout>
